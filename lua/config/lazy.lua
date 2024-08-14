@@ -42,6 +42,7 @@ require("lazy").setup({
 			},
 		},
 	},
+	opts = function()
+		vim.cmd.colorscheme("catppuccin")
+	end,
 })
-
---require("config.remaps")

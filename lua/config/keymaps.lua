@@ -9,24 +9,11 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- Tooltips
 local wk = require("which-key")
 
-wk.register({
-	-- Comments
-	c = {
-		c = { "gcc", "Comment/Uncomment", noremap = false },
-	},
-
-	-- Markdorwn
-	m = {
-		{ "markdown" },
-		p = { "<cmd>MarkdownPreview<cr>", "Preview", noremap = false },
-		s = { "<cmd>MarkdownPreviewStop<cr>", "Stop Preview", noremap = false },
-		t = { "<cmd>MarkdownPreviewToggle<cr>", "Toggle preview", noremap = false },
-	},
-}, { prefix = "<leader>" })
-
-wk.register({
-	-- Comments
-	c = {
-		c = { "gcc", "Comment/Uncomment", noremap = false },
-	},
-}, { prefix = "<leader>", mode = "v" })
+wk.add({
+	{ "<leader>cc", "gcc", desc = "Comment/Uncomment", remap = true },
+	{ "<leader>cc", "gcc", desc = "Comment/Uncomment", mode = "v", remap = true },
+	{ "<leader>m", desc = "markdown" },
+	{ "<leader>mp", "<cmd>MarkdownPreview<cr>", desc = "Preview", remap = true },
+	{ "<leader>ms", "<cmd>MarkdownPreviewStop<cr>", desc = "Stop Preview", remap = true },
+	{ "<leader>mt", "<cmd>MarkdownPreviewToggle<cr>", desc = "Toggle preview", remap = true },
+})

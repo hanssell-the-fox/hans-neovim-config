@@ -5,7 +5,8 @@ return {
 		priority = 1000,
 		config = function()
 			require("catppuccin").setup({
-				flavour = "macchiato",
+				flavour = "frappe",
+				background = { dark = "frappe" },
 				transparent_background = true,
 			})
 		end,
@@ -14,7 +15,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin",
+			colorscheme = "catppuccin-frappe",
 		},
 	},
 }
