@@ -43,6 +43,6 @@ require("lazy").setup({
 		},
 	},
 	opts = function()
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme("catppuccin-moccha")
 	end,
 })

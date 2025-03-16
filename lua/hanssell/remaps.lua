@@ -5,7 +5,7 @@
 
 -- Window Management
 vim.keymap.set("n", "<leader>sv", ":vsplit<CR>", { noremap = true, silent = true }) -- Split Vertical
-vim.keymap.set("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true })  -- Split Horizontal
+vim.keymap.set("n", "<leader>sh", ":split<CR>", { noremap = true, silent = true }) -- Split Horizontal
 
 -- Indenting
 vim.keymap.set("v", "<", "<gv")
@@ -21,10 +21,18 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", '"_dP')
 vim.keymap.set("n", "Q", "<NOP>") -- The <devil> key
 
 -- Comments
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 
+-- System Clipboard
+vim.keymap.set("n", "<leader>y", '"+y')
+vim.keymap.set("v", "<leader>y", '"+y')
+vim.keymap.set("n", "<leader>Y", '"+Y')
+
+-- Save
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("i", "C-S", "<C-C>:w<CR><ESC>")
